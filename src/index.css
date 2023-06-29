@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .spin{
+        animation: rotation 1s linear;
+        color: #fff;
+    }
+    [data-number = '1']{
+      animation-delay: 0s;
+      transition-property: background-color;
+      transition-delay: 0.6s;
+    }
+    [data-number = '2']{
+      animation-delay: 0.3s;
+      transition-property: background-color;
+      transition-delay: 0.9s;
+    }
+    [data-number = '3']{
+      animation-delay: 0.6s;
+      transition-property: background-color;
+      transition-delay: 1.2s;
+    }
+    [data-number = '4']{
+      animation-delay: 0.9s;
+      transition-property: background-color;
+      transition-delay: 1.5s;
+    }
+    [data-number = '5']{
+      animation-delay: 1.2s;
+      transition-property: background-color;
+      transition-delay: 1.8s;
+    }
+    @keyframes rotation {
+        from {
+          transform: rotateX(0deg);
+        }
+        to {
+          transform: rotateX(360deg);
+        }
+      }
+}
